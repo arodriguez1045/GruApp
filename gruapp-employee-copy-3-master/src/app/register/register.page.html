@@ -1,0 +1,41 @@
+<ion-content no-bounce has-bouncing="false" forceOverscroll="false" class="full-page"
+  style="background-color: rgb(191, 191, 191);">
+  <div class="building-bg">
+    <div class="logo">
+      <ion-img class="circle-img" src="/assets/logo.svg"></ion-img>
+    </div>
+  </div>
+
+  <ion-card class="register-card">
+    <ion-segment>
+      <ion-segment-button (click)="changeRegister(false)" class="background-btn" value="register" style="border: 0;">
+        <h5 class="text-segment">Registrarme</h5>
+      </ion-segment-button>
+      <ion-segment-button (click)="changeRegister(true)" class="background-btn" value="sign-in" style="border: 0;">
+        <h5 class="text-segment-2">Iniciar</h5>
+      </ion-segment-button>
+    </ion-segment>
+
+    <ion-card-content *ngIf="register">
+      <ion-input type="text" placeholder="Correo Electrónico" [(ngModel)]="email" class="email"></ion-input>
+      <ion-input type="password" placeholder="Contraseña" [(ngModel)]="password" class="password"></ion-input>
+      <ion-button expand="full" href="/forgot-password" class="forgot-btn">
+        <h5 style="text-align: center; margin-top: 20px;">¿Olvidó contraseña?</h5>
+      </ion-button>
+      <ion-button class="start-btn" (click)="singIn()">INICIAR SESIÓN</ion-button>
+    </ion-card-content>
+
+    <ion-card-content *ngIf="!register">
+      <ion-input [(ngModel)]="email" type="text" placeholder="Correo Electrónico" class="email"></ion-input>
+      <div class="flag-number">
+        <ion-img class="flag-img" src="/assets/puertorico.png"></ion-img>
+        <ion-input [(ngModel)]="phoneNumber" type="tel" placeholder="Teléfono" class="phone"></ion-input>
+      </div>
+      <ion-input [(ngModel)]="company" type="text" placeholder="Compañía (opcional)" class="company"></ion-input>
+      <ion-button class="start-btn" (click)="signUp()">REGISTRARME</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+
+  <h5 class="terms-conditions">Al registrarme acepto los Términos y Condiciones</h5>
+</ion-content>

@@ -1,0 +1,46 @@
+<div class="add-towing-toolbar" no-bounce has-bouncing="false" forceOverscroll="false">
+  <h6 class="add-towing">Cotizar</h6>
+</div>
+
+<ion-button class="arrow-btn" (click)="goBack()">
+  <ion-icon class="arrow" ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+</ion-button>
+
+<ion-content>
+
+  <ion-card style="box-shadow: none;">
+    <ion-avatar class="crash-box">
+      <ion-img *ngIf="carImage != null"src="{{carImage}}"></ion-img>
+      <ion-card style="box-shadow: none;">
+        <ion-icon class="car" *ngIf="carImage == null" name="car"></ion-icon>
+      </ion-card>
+    </ion-avatar>
+
+    <p style="text-align: center; font-weight: 700;">{{model}}</p>
+  </ion-card>
+
+  <ion-card class="prices-card">
+    <ion-card-subtitle style="text-align: center; padding-top: 10px; padding-bottom: 10px;">PRICE
+    </ion-card-subtitle>
+    <div class="divider">
+    </div>
+    <ion-input class="price-input" placeholder="{{price}}"></ion-input>
+  </ion-card>
+
+  <ion-card class="prices-card">
+    <ion-card-subtitle style="text-align: center; padding-top: 10px; padding-bottom: 10px;">DESCRIPTION
+    </ion-card-subtitle>
+    <div class="divider">
+    </div>
+    <ion-input class="desc-input" placeholder="{{description}}"></ion-input>
+
+    <!-- <p style="text-align: center; font-weight: 400; color: grey;">Choque en la parte de alfrente, área de motor.</p> -->
+  </ion-card>
+</ion-content>
+<ion-button expand="full" class="done-btn" (click)="openPage()">COTIZAR</ion-button>
+
+
+
+
+
+

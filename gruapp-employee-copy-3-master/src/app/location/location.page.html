@@ -1,0 +1,15 @@
+<ion-content no-bounce has-bouncing="false" forceOverscroll="false" class="full-page">
+  <ion-card class="tutorial-first-card">
+    <ion-img class="circle-img" src="/assets/ubicacionactual.svg"></ion-img>
+    <ion-card-header>
+      <ion-card-title class="title-service">Activa tu ubicación actual</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="service-info">
+      Elija su ubicación para comenzar a encontrar la solicitud a su alrededor.
+    </ion-card-content>
+    <div class="btn-container">
+      <ion-button class="start-btn" (click)="openPage()" (click)="acceptLocation()">USAR UBICACION ACTUAL</ion-button>
+      <ion-button class="start-btn2" (click)="openPage()">AHORA NO</ion-button>
+    </div>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,60 @@
+<ion-toolbar class="add-towing-toolbar" no-bounce has-bouncing="false" forceOverscroll="false">
+  <h6 class="add-towing">Licencia de Vehículo</h6>
+</ion-toolbar>
+
+<ion-button class="arrow-btn" (click)="goBack()">
+  <ion-icon class="arrow" ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+</ion-button>
+
+<ion-content >
+  <ion-card *ngIf= "licencia !=null && fecha != null"  class="avatar-card">
+    <ion-button expand="block" class="camera-btn">
+      <div class="image-container">
+        <ion-img class="circle-img" src="/assets/camera.svg"></ion-img>
+      </div>
+    </ion-button>
+  </ion-card>
+
+  <ion-card *ngIf="licencia ==null || fecha == null"  (click)= "openCamera()"class="avatar-card">
+    <ion-button expand="block" class="camera-btn">
+      <div class="image-container">
+        <ion-img class="circle-img" src="/assets/camera.svg"></ion-img>
+      </div>
+    </ion-button>
+  </ion-card>
+
+  <p *ngIf= "licencia !=null && fecha != null" class="licence-number">LICENCIA DE VEHICULO</p>
+  <ion-card *ngIf= "licencia !=null && fecha != null " style="padding: 5px;">
+    <ion-input class="number" type="number" placeholder="{{licenseNum}}"></ion-input>
+  </ion-card>
+
+  <p *ngIf="licencia ==null || fecha == null "  class="licence-number">LICENCIA DE VEHICULO</p>
+  <ion-card *ngIf="licencia ==null || fecha == null "  style="padding: 5px;">
+    <ion-input [(ngModel)]="licenseNum" class="number" type="number" placeholder="{{licenseNum}}"></ion-input>
+  </ion-card>
+
+  <p  *ngIf= "licencia !=null && fecha != null" class="expiration-date">FECHA DE EXPIRACIÓN</p>
+  <ion-card *ngIf= "licencia !=null && fecha != null " style="padding: 5px;">
+    <ion-item class="lines">
+      <ion-label class="date-format">{{fecha}}</ion-label>
+      <ion-datetime class="date-number" display-format="MMM, DD, YYYY"></ion-datetime>
+      <ion-button class="btn">
+        <ion-icon class="arrow-color" ios="ios-arrow-forward" md="md-arrow-forward"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-card>
+
+  <p   *ngIf="licencia ==null ||fecha == null" class="expiration-date">FECHA DE EXPIRACIÓN</p>
+  <ion-card *ngIf="licencia ==null ||fecha == null"  style="padding: 5px;">
+    <ion-item class="lines">
+      <ion-label class="date-format">{{fecha}}</ion-label>
+      <ion-datetime [(ngModel)]="fecha" class="date-number" display-format="MMM, DD, YYYY"></ion-datetime>
+      <ion-button class="btn">
+        <ion-icon class="arrow-color" ios="ios-arrow-forward" md="md-arrow-forward"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-card>
+
+</ion-content>
+<ion-button class="start-btn" expand="full"  (click)="setInformation()">COMPLETADO</ion-button>
+<!-- <ion-button *ngIf = "decision == false" class="start-btn" expand="full"  (click)="openPage()">COMPLETADO</ion-button> -->

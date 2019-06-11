@@ -1,0 +1,49 @@
+.full-page {
+  height: 100vh;
+}
+
+.circle-img {
+  width: 250px;
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tutorial-first-card {
+  margin-top: 100px;
+  box-shadow: none;
+}
+
+.title-service {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 15px;
+}
+
+.service-info {
+  line-height: 25px;
+  font-weight: 300;
+  font-size: 16px;
+  text-align: center;
+}
+
+.btn-container {
+  width: 175px;
+  margin: auto;
+}
+
+.start-btn {
+  font-size: 12px;
+  width: 180px;
+  margin-bottom: 20px;
+  --background-activated: rgb(223, 223, 223);
+}
+
+.start-btn2 {
+  font-size: 12px;
+  width: 180px;
+  margin-bottom: 10px;
+  --background: grey;
+  --background-activated: rgb(223, 223, 223);
+}

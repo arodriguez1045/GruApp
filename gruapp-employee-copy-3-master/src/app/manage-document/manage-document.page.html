@@ -1,0 +1,66 @@
+<ion-toolbar class="manage-document-toolbar" no-bounce has-bouncing="false" forceOverscroll="false">
+  <h6 class="manage-document">Manejo de Documento</h6>
+</ion-toolbar>
+
+<ion-button class="arrow-btn" (click)="goBack()">
+  <ion-icon class="arrow" ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+</ion-button>
+
+<ion-content>
+  <ion-card style="margin-bottom: 0;">
+    <ion-button expand="block" (click)="openCamera()" class="camera-btn">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="5" style="margin-top: 20px;">
+            <div class="camera-container">
+              <ion-img class="avatar-img" src="/assets/man-user.svg"></ion-img>
+            </div>
+          </ion-col>
+          <ion-col size="7" style="margin-top: 20px;">
+            <ion-card style="height: 40px; background-color: rgba(228, 228, 228, 0.728); box-shadow: none; margin: 0;">
+            </ion-card>
+            <ion-card
+              style="height: 20px; background-color: rgba(228, 228, 228, 0.728); box-shadow: none; margin-left: 0; margin-right: 0;">
+            </ion-card>
+            <ion-card
+              style="height: 20px; background-color: rgba(228, 228, 228, 0.728); box-shadow: none; margin-left: 0; margin-right: 0;">
+            </ion-card>
+            <ion-card
+              style="height: 20px; background-color: rgba(228, 228, 228, 0.728); box-shadow: none; margin-left: 0; margin-right: 0; padding-bottom: 0;">
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-button>
+    <h5 class="title">Licencia de conducir</h5>
+  </ion-card>
+
+  <ion-card style="margin-bottom: 0;">
+    <ion-button expand="block" (click)="openCamera()" class="camera-btn">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="5" style="margin-top: 20px;">
+            <div class="camera-container">
+              <ion-img class="avatar-img" src="/assets/man-user.svg"></ion-img>
+            </div>
+          </ion-col>
+          <ion-col size="7" style="margin-top: 20px;">
+            <ion-card style="height: 40px; background-color: rgba(228, 228, 228, 0.728); box-shadow: none; margin: 0;">
+            </ion-card>
+            <ion-card
+              style="height: 20px; background-color: rgba(228, 228, 228, 0.728); box-shadow: none; margin-left: 0; margin-right: 0;">
+            </ion-card>
+            <ion-card
+              style="height: 20px; background-color: rgba(228, 228, 228, 0.728); box-shadow: none; margin-left: 0; margin-right: 0;">
+            </ion-card>
+            <ion-card
+              style="height: 20px; background-color: rgba(228, 228, 228, 0.728); box-shadow: none; margin-left: 0; margin-right: 0; padding-bottom: 0;">
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-button>
+    <h5 class="title">Licencia del vehículo</h5>
+  </ion-card>
+</ion-content>
+<ion-button class="start-btn" expand="full" (click)="openPage()">COMPLETADO</ion-button>

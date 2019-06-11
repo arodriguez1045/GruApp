@@ -1,0 +1,128 @@
+.my-custom-menu {
+  --width: 300px;
+  z-index: 1000;
+}
+
+.picture-square {
+  background-color: #fdbc18;
+  height: 300px;
+}
+
+.circle-btn {
+  position: absolute;
+  top: 40px;
+  --background: trasparent;
+  --background-activated: trasparent;
+}
+
+.profile-circle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid white;
+  width: 100px;
+  height: 100px;
+}
+
+.profile-name-avatar {
+  text-align: center;
+  font-weight: 300;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+}
+
+.profile-name {
+  margin-left: 25px;
+}
+
+.menu-btn {
+  width: 30px;
+  height: 30px;
+  color: rgb(255, 255, 255);
+}
+
+.menu-btn {
+  color: rgb(255, 255, 255);
+}
+
+
+
+.orange-banner {
+  height: 300px;
+  background-color: #fdbc18;
+}
+
+.nav-bar {
+  height: 100px;
+  background-color: #fdbc18;
+}
+
+.borders {
+  --border-style: none;
+}
+
+.total {
+  font-size: 60px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-weight: 300;
+  margin: 0;
+}
+
+.total-title {
+  text-align: center;
+  font-weight: 300;
+  color: white;
+}
+
+.history-title {
+  color: grey;
+  font-weight: 300;
+  margin-left: 20px;
+  margin-bottom: 0;
+}
+
+.history-card {
+  margin-top: 10px;
+}
+
+.profile-pic {
+  margin-top: 10px;
+}
+
+.profile-number {
+  margin-bottom: 0;
+}
+
+.licence-number {
+  margin-top: 0;
+  margin-left: 25px;
+}
+
+.history-total {
+  float: right;
+  font-size: 15px;
+  margin-top: 40px;
+}
+
+.customer-pay-info {
+  border-bottom: 1px solid rgb(205, 205, 205);
+}
+
+.home,
+.wallet,
+.history,
+.car,
+.setting,
+.logout {
+  font-size: 12px;
+  color: grey;
+  padding: 5px;
+}
+
+.add-towing {
+  color: rgb(255, 255, 255);
+}

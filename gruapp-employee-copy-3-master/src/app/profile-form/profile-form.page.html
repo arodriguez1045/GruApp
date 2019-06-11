@@ -1,0 +1,28 @@
+<ion-content class="grey-background">
+  <ion-toolbar class="services-toolbar" no-bounce has-bouncing="false" forceOverscroll="false">
+    <h6 class="services-title">Editar Perfil</h6>
+  </ion-toolbar>
+
+  <ion-button class="arrow-btn" (click)="goBack()">
+    <ion-icon class="arrow" ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+  </ion-button>
+
+
+  <ion-card class="avatar-card">
+    <ion-button expand="full" (click)="openCamera()" class="camera-btn">
+      <div class="image-container">
+        <ion-img class="circle-img" src="/assets/camera.svg"></ion-img>
+      </div>
+    </ion-button>
+  </ion-card>
+
+  <ion-card class="info-forms">
+    <ion-input [(ngModel)]="user" class="name" placeholder="{{user}}"></ion-input>
+    <!-- <ion-input class="last-name" placeholder="Apellidos"></ion-input> -->
+    <p class="phone-number" >{{phone}}</p>
+    <ion-input [(ngModel)]="email" class="email" placeholder="{{email}}"></ion-input>
+    <!-- <ion-input class="password" placeholder="Contraseña"></ion-input> -->
+  </ion-card>
+</ion-content>
+
+<ion-button class="start-btn" expand="full" (click)="updateClient()">GUARDAR</ion-button>

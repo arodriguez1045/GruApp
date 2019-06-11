@@ -1,0 +1,25 @@
+<ion-content>
+  <div class="orange-bg">
+    <ion-button class="arrow-btn" (click)="goBack()">
+      <ion-icon class="arrow" ios="ios-arrow-back" md="ios-arrow-back"></ion-icon>
+    </ion-button>
+    <ion-img class="logo" src="/assets/logo.svg" style="float:left"></ion-img>
+    <div class="verify-phone">
+      <span>Verificación de teléfono</span>
+    </div>
+  </div>
+
+  <div id="form">
+    <ion-input id=one #one type="number" class="verification-code" placeholder="&bull;" maxLength="1" size="1" min="0" max="99999"
+      pattern="[0-9]" (keyup)="gotoNextField(two)">  </ion-input>
+    <ion-input id=two #two type="number" class="verification-code" placeholder="&bull;" maxLength="1" size="1" min="0" max="9"
+      pattern="regularExp" (keyup) ="gotoNextField(three)"></ion-input>
+    <ion-input id=three #three type="number" class="verification-code" placeholder="&bull;" maxLength="1" size="1" min="0" max="9"
+      pattern="regularExp" (keyup)="gotoNextField(four)" ></ion-input>
+    <ion-input id=four #four type="number" class="verification-code" placeholder="&bull;" maxLength="1" size="1" min="0" max="9"
+      pattern="regularExp"></ion-input>
+  </div>
+</ion-content>
+
+<ion-button margin=20px expand="block" (click)= reSendCode()>Reenviar</ion-button>
+<ion-button expand="full" (click)="openPage()" class="start-btn">VERIFICAR</ion-button>

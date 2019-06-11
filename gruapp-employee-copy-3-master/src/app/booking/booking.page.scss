@@ -1,0 +1,188 @@
+.nav-bar {
+  padding-top: 30px;
+  background-color: #ffffff;
+  height: 90px;
+  border-bottom: 2px solid rgb(211, 211, 211);
+}
+
+.total {
+  font-size: 60px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-weight: 300;
+  margin: 0;
+}
+
+.total-title {
+  text-align: center;
+  font-weight: 300;
+}
+
+.circle-btn {
+  --background: transparent;
+  --background-activated: transparent;
+  --box-shadow: none;
+}
+
+.arrow-btn {
+  color: black;
+}
+
+.card-order {
+  margin: 0;
+  box-shadow: none;
+  background-color: rgba(230, 230, 230, 0.473);
+  border-radius: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.profile-pic {
+  --border-radius: 12px;
+}
+
+
+.price{
+  font-size: 20px;
+  margin:0;
+  margin-right: 50px;
+  // text-align: center;
+}
+
+.miles {
+  margin: 0;
+  margin-left: 65px;
+  font-size: 18px;
+  margin-top: -22px;
+}
+
+.price {
+  margin-top: 5px;
+}
+
+.miles {
+  color: rgb(176, 176, 176);
+}
+
+.profile-name {
+  color: black;
+  font-weight: 300;
+  margin-left: 15px;
+}
+
+.pick-up-point {
+  margin: 0;
+  border-radius: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  box-shadow: none;
+  border-bottom: 1px solid rgb(215, 215, 215);
+}
+
+.pick-up-title {
+  color: grey;
+  font-size: 10px;
+  font-weight: 300;
+  margin-left: 10px;
+}
+
+.pick-up-address {
+  margin-left: 10px;
+}
+
+.pick-up-btn {
+  color: grey;
+  font-weight: 300;
+  --background: transparent;
+  --background-activated: transparent;
+  float: right;
+  margin-top: 10px;
+  --box-shadow: none;
+}
+
+.end-up-point {
+  margin: 0;
+  border-radius: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  box-shadow: none;
+  border-bottom: 1px solid rgb(215, 215, 215);
+}
+
+.end-up-title {
+  color: grey;
+  font-size: 10px;
+  font-weight: 300;
+  margin-left: 10px;
+}
+
+.end-point-address {
+  margin-left: 10px;
+}
+
+.end-up-btn {
+  color: grey;
+  font-weight: 300;
+  --background: transparent;
+  --background-activated: transparent;
+  float: right;
+  margin-top: 10px;
+  --box-shadow: none;
+}
+
+.call-card {
+  margin: 0;
+  box-shadow: none;
+  border-radius: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgb(201, 201, 201);
+  height: 100px;
+}
+
+.card-btn {
+  --background: #4ce4b1;
+  --padding-start: 30px;
+  --padding-end: 30px;
+  --padding-bottom: 10px;
+  height: auto;
+  position: absolute;
+  top: 12px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  --background-activated: rgb(223, 223, 223);
+  --box-shadow: none;
+}
+
+.btn-block {
+  text-align: center;
+}
+
+.phone-icon {
+  height: 30px;
+  width: 30px;
+  padding-top: 10px;
+}
+
+.done-btn {
+  width: 100%;
+  height: 100px;
+  margin: 0;
+  font-size: 25px;
+  font-weight: 300;
+  --background-activated: rgb(223, 223, 223);
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.cancel-btn {
+  width: 100%;
+  height: 100px;
+  margin: 0;
+  font-size: 25px;
+  font-weight: 300;
+  --background-activated: rgb(223, 223, 223);
+  border: 1px solid rgb(255, 255, 255);
+}

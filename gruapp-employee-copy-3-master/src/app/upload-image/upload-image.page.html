@@ -1,0 +1,44 @@
+<ion-toolbar class="add-towing-toolbar" no-bounce has-bouncing="false" forceOverscroll="false">
+  <h6 class="add-towing">Licencia de Conducir</h6>
+</ion-toolbar>
+
+<ion-button class="arrow-btn" (click)="goBack()">
+  <ion-icon class="arrow" ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+</ion-button>
+
+<ion-content>
+  <ion-card *ngIf= "image == null"  class="avatar-card">
+    <ion-button expand="block" (click)="openCamera()" class="camera-btn">
+      <div class="image-container">
+        <ion-img  class="circle-img" src="/assets/camera.svg"></ion-img>
+      </div>
+    </ion-button>
+  </ion-card>
+
+  <!-- <ion-card *ngIf= "image != null" class="avatar-card">
+    <ion-button expand="block" (click)="openCamera()" class="camera-btn">
+    
+        <ion-img class="person-img" src="{{image}}"></ion-img>
+        
+    </ion-button>
+  </ion-card> -->
+
+  <p class="licence-number">NÚMERO DE LICENCIA</p>
+  <ion-card style="padding: 5px;">
+    <ion-input [(ngModel)]="licNum" class="number" type="text" placeholder="1234567"></ion-input>
+    <!-- <ion-input [(ngModel)]="licNum" class="number" type="text" placeholder="{{savedPhoto}}"></ion-input> -->
+  </ion-card>
+
+  <p class="expiration-date">FECHA DE EXPIRACIÓN</p>
+  <ion-card style="padding: 5px;">
+    <ion-item class="lines">
+      <ion-label class="date-format">MM/DD/YYYY</ion-label>
+      <ion-datetime [(ngModel)]="expDate"class="date-number" display-format="MMM, DD, YYYY"></ion-datetime>
+      <ion-button class="btn">
+        <ion-icon class="arrow-color" ios="ios-arrow-forward" md="md-arrow-forward"></ion-icon>
+      </ion-button>
+      
+    </ion-item>
+  </ion-card>
+</ion-content>
+<ion-button class="start-btn" (click)="setInformation()" expand="full">COMPLETADO</ion-button>

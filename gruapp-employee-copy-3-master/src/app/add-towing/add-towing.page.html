@@ -1,0 +1,28 @@
+<ion-toolbar class="add-towing-toolbar" no-bounce has-bouncing="false" forceOverscroll="false">
+  <h6 class="add-towing">Añadir Grúa</h6>
+</ion-toolbar>
+
+<ion-button class="arrow-btn" (click)="goBack()">
+  <ion-icon class="arrow" ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+</ion-button>
+
+<ion-content>
+  <ion-card class="add-towing-card">
+
+    <h5 class="label-input">MARCA</h5>
+    <ion-input [(ngModel)] = "marca" type="text" class="name"></ion-input>
+
+    <h5 class="label-input">MODELO</h5>
+    <ion-input [(ngModel)] = "modelo" type="text" class="name"></ion-input>
+
+    <h5 class="label-input">AÑO</h5>
+    <ion-input [(ngModel)] = "year" type="text" class="name"></ion-input>
+
+    <h5 class="label-input">TABLILLA</h5>
+    <ion-input [(ngModel)] = "tablilla" type="text" class="name"></ion-input>
+
+    <h5 class="label-input">COLOR</h5>
+    <ion-input [(ngModel)] = "color" type="text" class="name"></ion-input>
+  </ion-card>
+</ion-content>
+<ion-button expand="full" class="done-btn" (click)="saveTowing()">COMPLETADO</ion-button>

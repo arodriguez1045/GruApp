@@ -1,0 +1,102 @@
+<ion-toolbar no-bounce has-bouncing="false" forceOverscroll="false">
+  <div class="nav-bar">
+    <ion-row ion-align-items-center>
+      <ion-col size="2">
+        <ion-fab>
+          <ion-fab-button size="small" class="menu-btn-1">
+            <ion-icon class="menu-btn" (click)='openCustom()' ios="ios-menu" md="md-menu"></ion-icon>
+          </ion-fab-button>
+        </ion-fab>
+      </ion-col>
+      <ion-col size="8">
+        <h6 class="add-towing" style="text-align: center">Disponible</h6>
+      </ion-col>
+      <ion-col size="2">
+        <ion-toggle class="switch-btn" checked="true"></ion-toggle>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-toolbar>
+
+<ion-menu side="start" menuId="custom" class="my-custom-menu">
+  <ion-content>
+    <div class="picture-square">
+      <!-- <ion-avatar class="profile-circle">
+        <img class="profile-photo" src="assets/girl.jpg">
+        <h5 class="profile-name-avatar">Jane Doe</h5>
+      </ion-avatar> -->
+      <img class="profile-photo" src="assets/logowhite.png">
+      <h5 class="profile-name-avatar">{{name}}</h5>
+    </div>
+    <ion-list>
+      <ion-item ion-buttons href="/get-service" lines="none" class="home">
+        <ion-icon ios="ios-home" md="md-home" style="margin-right: 10px;"></ion-icon>Inicio
+      </ion-item>
+      <ion-item ion-buttons href="/deposit" lines="none" class="wallet">
+        <ion-icon ios="ios-wallet" md="md-wallet" style="margin-right: 10px;"></ion-icon>Ingreso
+      </ion-item>
+      <ion-item ion-buttons href="/quote-history" lines="none" class="quote">
+        <ion-icon ios="ios-pricetags" md="md-pricetags" style="margin-right: 10px;"></ion-icon>Historial Cotización
+      </ion-item>
+      <ion-item ion-buttons href="/services" lines="none" class="setting">
+        <ion-icon ios="ios-hammer" md="md-hammer" style="margin-right: 10px;"></ion-icon>Servicios
+      </ion-item>
+      <ion-item ion-buttons href="/account" lines="none" class="setting">
+        <ion-icon ios="ios-cog" md="md-cog" style="margin-right: 10px;"></ion-icon>Cuenta
+      </ion-item>
+      <ion-item ion-buttons (click)="logOut()" lines="none" class="logout">
+        <ion-icon ios="ios-log-out" md="md-log-out" style="margin-right: 10px;"></ion-icon>Cerrar Sesión
+      </ion-item>
+    </ion-list>
+  </ion-content>
+
+  <ion-router-outlet main></ion-router-outlet>
+</ion-menu>
+<div class="orange-bar" *ngIf="this.length == 0">
+    <p class="notification-banner">No tienes solicitudes</p>
+  </div>
+<div class="orange-bar" *ngIf="this.length > 0">
+  <p class="notification-banner">Tienes<span> {{this.length}} </span>solicitudes de servicio</p>
+</div>
+<ion-content>
+<div *ngFor="let item of serviceRequests" value="item">
+<ion-card class="whole-card">
+  <div class="profile-info">
+    <ion-row ion-align-item-center style="border-bottom: 1px solid #d7d7d7;">
+        <ion-col size="2">
+            <ion-icon style="font-size: 80px;" name="contact"></ion-icon>
+        </ion-col>
+        <!-- <ion-col size="8">
+          <h6 class="profile-name">{{item.client.name}}</h6>
+        </ion-col> -->
+    </ion-row>
+    <ion-row ion-align-items-center>
+      <ion-col size="6">
+        <!-- <p class="total">Total: <span style="font-weight: bold;">${{item.price}}</span></p> -->
+        <p>Servicio: <span style="font-weight: bold;">{{item.service}}</span></p>
+        <!-- <p class="miles">Millaje: <span style="font-weight: bold;">2.45mi</span></p> -->
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-card>
+<ion-card style="box-shadow: none; border-radius: 0; margin: 0;">
+  <div class="end-point">
+    <p class="end-point-title">VEHÍCULO</p>
+    <p class="end">{{item.clientCar.make + " " + item.clientCar.model}}</p>
+  </div>
+  <!-- <ion-button expand="full" class="start-btn" (click)="openPage()">ACEPTAR</ion-button> -->
+</ion-card>
+<ion-row>
+  <ion-col style="padding: 0;" size="6">
+    <ion-button (click)="getPhone(item.objectId)" expand="full" class="accept-btn">
+      ACEPTAR
+    </ion-button>
+  </ion-col>
+  <ion-col style="padding: 0;" size="6">
+    <ion-button expand="full" class="deny-btn">
+      RECHAZAR
+    </ion-button>
+  </ion-col>
+</ion-row>
+</div>
+</ion-content>

@@ -1,0 +1,8 @@
+{
+  "name": "gruApp-employee",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

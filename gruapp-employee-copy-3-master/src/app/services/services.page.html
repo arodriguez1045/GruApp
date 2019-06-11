@@ -1,0 +1,98 @@
+<ion-toolbar class="services-toolbar" no-bounce has-bouncing="false" forceOverscroll="false">
+  <h6 class="services-title">Servicios</h6>
+</ion-toolbar>
+
+<ion-button class="arrow-btn" (click)="goBack()">
+  <ion-icon class="arrow" ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+</ion-button>
+
+<ion-content>
+  <p class="towing-type-title">Selecciona tipo de grúa:</p>
+  <!-- Checkboxes in a List -->
+<ion-list lines="none">
+    <ion-radio-group>
+        <ion-item no-lines> 
+          <ion-label>Grúa Hidráulica</ion-label>
+          <ion-radio [(ngModel)]="gruaHid" class="style-color" slot="start" value="Grúa Hidráulica"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Grúa de plataforma</ion-label>
+          <ion-radio  [(ngModel)]="gruaPlat" class="style-color" slot="start" value="Grúa de plataforma"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Asistencia en carretera</ion-label>
+          <ion-radio [(ngModel)]="asistCar" class="style-color" slot="start" value="Asistencia en carretera"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+  </ion-list>
+  
+
+  <p class="towing-type-title">Servicios:</p>
+
+ 
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="2">
+        <ion-checkbox [(ngModel)]="gasolina"  value="Gasolina"color="primary"></ion-checkbox>
+      </ion-col>
+      <ion-col class="towing" size="10">
+        Gasolina
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="2">
+        <ion-checkbox  [(ngModel)]="cerrajeria" value="Cerrajería"color="primary"></ion-checkbox>
+      </ion-col>
+      <ion-col class="towing" size="10">
+        Cerrajería
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="2">
+        <ion-checkbox  [(ngModel)]="cargaBat" value="Carga de Bateria" color="primary"></ion-checkbox>
+      </ion-col>
+      <ion-col class="towing" size="10">
+        Carga de batería
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="2">
+        <ion-checkbox  [(ngModel)]="cambioGoma" value="Cambio de Goma"color="primary"></ion-checkbox>
+      </ion-col>
+      <ion-col class="towing" size="10">
+        Cambio de goma
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="2">
+        <ion-checkbox   [(ngModel)]="servGrua" color="primary"></ion-checkbox>
+      </ion-col>
+      <ion-col class="towing" size="10">
+        Servicio de grúa
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="2">
+        <ion-checkbox  [(ngModel)]="servEsp" color="primary"></ion-checkbox>
+      </ion-col>
+      <ion-col class="towing" size="10">
+        Servicio especial
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-button class="start-btn" expand="full" (click)="viewData()">GUARDAR</ion-button>

@@ -1,0 +1,32 @@
+<div class="nav-bar">
+        <ion-button (click)="goBack()" class="circle-btn" size="small">
+          <ion-icon class="menu-btn" ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+        </ion-button>
+</div>
+
+<ion-content>
+  <h5 class="history-title">Historial</h5>
+  <ion-card class="history-card">
+
+    <!-- first cutomer start here -->
+    <ion-grid class="customer-pay-info">
+      <ion-row *ngFor=" let service of historyService" ion-align-items-center>
+        <ion-col size="2">
+          <ion-avatar class="profile-pic">
+            <!-- <img src="assets/girl.jpg"> -->
+            <ion-icon style="font-size: 80px; margin-top: -10px;" name="contact"></ion-icon>
+          </ion-avatar>
+        </ion-col>
+        <ion-col size="7">
+          <h6 class="profile-name">{{service.get('client').get('name')}}</h6>
+          <p class="licence-number">{{service.get('client').get('licenseNum')}}</p>
+        </ion-col>
+        <ion-col size="3">
+          <p class="history-total">{{service.get('price')}}</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <!-- first customer ends here -->
+   
+  </ion-card>
+</ion-content>

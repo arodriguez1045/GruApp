@@ -1,0 +1,47 @@
+.add-towing-toolbar {
+    padding-top: 30px;
+    background-color: #fdbc18;
+  }
+  
+  .add-towing {
+    font-weight: 700;
+    // border-bottom: 2px solid rgb(218, 218, 218);
+    text-align: center;
+    padding-bottom: 15px;
+    color: rgb(255, 255, 255);
+  }
+  
+  .arrow-btn {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    z-index: 20;
+    width: 50px;
+    --background: rgba(255, 255, 255, 0);
+    --background-activated: transparent;
+    --box-shadow: none;
+  }
+  
+  .arrow {
+    color: rgb(255, 255, 255);
+    height: 40px;
+    width: 40px;
+  }
+  
+  
+  .delete-btn {
+    --background: transparent;
+    --background-activated: transparent;
+  }
+  
+  .delete-icon {
+    color: rgb(218, 16, 16);
+    width: 30px;
+    height: 30px;
+  }
+  
+  .pencil-icon {
+    color: rgb(16, 218, 151);
+    width: 30px;
+    height: 30px;
+  }
