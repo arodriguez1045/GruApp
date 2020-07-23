@@ -57,7 +57,7 @@
     "core-js": "^2.5.4",
     "ionic-native-transitions": "^1.0.3",
     "jquery": "^3.4.1",
-    "parse": "^2.4.0",
+    "parse": "^2.10.0",
     "rxjs": "~6.3.3",
     "uk.co.workingedge.phonegap.plugin.launchnavigator": "^5.0.4",
     "zone.js": "~0.8.29"
